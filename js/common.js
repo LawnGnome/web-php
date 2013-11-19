@@ -226,6 +226,11 @@ $(document).ready(function() {
         $('.navbar .nav').stop().slideToggle();  
     });
 
+    // Search box autocomplete.
+    jQuery("#topsearch .search-query").search({
+        language: getLanguage(),
+        limit: 3
+    });
 });
 
 /**
@@ -235,3 +240,5 @@ function getLanguage()
 {
     return document.documentElement.lang;
 }
+
+// vim: set ts=4 sw=4 et:
