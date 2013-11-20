@@ -2136,13 +2136,6 @@ hr {
     border-radius: 0;
 }
 
-.prevnext-container a {
-    border: 0;
-}
-.prevnext-container .next {
-    float: right;
-}
-
 /**
  * User notes
  */
@@ -3099,14 +3092,12 @@ div.soft-deprecation-notice blockquote.sidebar {
 }
 
 
-.manualnavbar,
 #breadcrumbs {
     border:1px solid;
     margin:0 0 0.85714285714286em;
     font-size:.875em;
     line-height:1.71428571428571;
 }
-.manualnavbar .prevnext-container,
 #breadcrumbs .breadcrumbs-inner {
     padding:.5em .75em;
 }
@@ -3120,11 +3111,13 @@ div.soft-deprecation-notice blockquote.sidebar {
 #breadcrumbs .divider {
     padding:0 .25em;
 }
-.manualnavbar a:link,
-.manualnavbar a:visited,
 #breadcrumbs a:link,
 #breadcrumbs a:visited {
     border-width:0;
+}
+
+#prevnext-container .next {
+    float: right;
 }
 
 #mainmenu-toggle {
