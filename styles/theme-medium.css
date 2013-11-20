@@ -350,6 +350,7 @@ aside.tips div.inner {
 
 
 /* {{{ Breadcrumbs */
+.manualnavbar,
 #breadcrumbs {
     color: #737373;
     background:#f2f2f2;

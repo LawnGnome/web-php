@@ -147,6 +147,4 @@ if (isset($shortname) && $shortname) {
     </aside>
 <?php endif; ?>
 
-<?php include 'uservoice.inc' ?>
-
-<section class="layout-content <?php echo $curr ?>">
+<section class="layout-content <?php echo $curr ?> span<?php echo $config['layout_span']; ?>">

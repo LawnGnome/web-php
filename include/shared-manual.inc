@@ -618,11 +618,11 @@ function manual_setup_beta($setup) {
             "next"     => $setup["next"][0],
         ),
         "lang" => $setup["head"][1],
+        "thispage" => $setup["this"][0],
     );
     site_header($setup["this"][1] . " - Manual ", $config);
     
-    echo '<div class="change-language">' . manual_language_chooser($setup['head'][1], $setup['this'][0]) . '</div>';
-
+    echo '<div class="manualnavbar row-fluid">';
     if(isset($setup['prev']) || isset($setup['next'])) {
 
 
@@ -643,6 +643,8 @@ function manual_setup_beta($setup) {
 
     echo '</div> <!-- /.manualnavbar -->';
 
+
+    echo '<div class="change-language">' . manual_language_chooser($config["lang"], $config["thispage"]) . '</div>';
 
 }
 function manual_language_chooser($currentlang, $currentpage) {
