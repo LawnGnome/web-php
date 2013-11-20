@@ -617,12 +617,31 @@ function manual_setup_beta($setup) {
             "prev"     => $setup["prev"][0],
             "next"     => $setup["next"][0],
         ),
-        "lang"         => $setup["head"][1],
-        "thispage"     => $setup["this"][0],
+        "lang" => $setup["head"][1],
     );
     site_header($setup["this"][1] . " - Manual ", $config);
     
-    echo '<div class="change-language">' . manual_language_chooser($config["lang"], $config["thispage"]) . '</div>';
+    echo '<div class="change-language">' . manual_language_chooser($setup['head'][1], $setup['this'][0]) . '</div>';
+
+    if(isset($setup['prev']) || isset($setup['next'])) {
+
+
+        $prevNextHtml = '<div class="prevnext-container">';
+        if(isset($setup['prev'])) {
+            $prevNextHtml .= sprintf('<a href="%s" title="%s" class="prev">&laquo; %s</a>',
+                $setup['prev'][0], $setup['prev'][1], $setup['prev'][1]
+            );
+        }
+        if(isset($setup['next'])) {
+            $prevNextHtml .= sprintf('<a href="%s" title="%s" class="next">%s &raquo;</a>',
+                $setup['next'][0], $setup['next'][1], $setup['next'][1]
+            );
+        }
+        $prevNextHtml .= '</div>';
+        echo $prevNextHtml;
+    }
+
+    echo '</div> <!-- /.manualnavbar -->';
 
 
 }
