@@ -2849,7 +2849,7 @@ fieldset {
 /* }}} */
 
 .download-box {
-    margin: 3em 2em 4em;
+    margin: 3em 0 4em;
     position: relative;
     background-color: rgb(238, 238, 246);
     display: block;
@@ -2858,7 +2858,7 @@ fieldset {
     padding: 0.75em 0.625em;
     box-shadow: 2px 0 2px -2px rgb(212, 212, 232) inset, -2px 0 2px -2px rgb(212, 212, 232) inset;
 }
-.download-box h2 {
+.download-box h3 {
     color: #333;
     font-size: 1.125em;
     line-height: 1.33;
@@ -2867,10 +2867,14 @@ fieldset {
     position: absolute;
     top: -2em;
     left: 0;
+    right: 0;
 }
-.download-box .changelog {
-    font-style: italic;
-    font-weight: bold;
+.download-box h3 .release-state {
+    float: right;
+    opacity: 0.8;
+}
+.download-box h3 .changelog {
+    color:#369;
 }
 .download-box ul, .download-box li {
     list-style: none;
@@ -2879,7 +2883,7 @@ fieldset {
     padding: 0;
 }
 .download-box li {
-    margin-top: 0.75em;
+    margin-bottom: 0.75em;
 }
 .download-box .md5sum {
     display: block;
@@ -2893,21 +2897,18 @@ fieldset {
     float: right;
     font-size: 0.9em;
 }
-.download-box h3 {
-    margin-top: 0.75em;
-    font-size: 1em;
-    font-style: italic;
-    font-weight: bold;
-}
-.download-box .gpg {
+.download-box pre {
     background: white;
     border: solid 1px rgb(214, 214, 214);
     margin: 0px;
     padding: 0.75em 0.625em;
     overflow: auto;
-}
-.download-box pre {
     font: normal 14px / 1.46 "Source Code Pro", monospace;
+}
+@media (max-width: 465px) {
+    .download-box h2 .release-state {
+        display: none;
+    }
 }
 
 
