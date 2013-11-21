@@ -2848,39 +2848,64 @@ fieldset {
 }
 /* }}} */
 
-section.downloads {
-}
-.gpg {
-    background: #f7f7f7;
-    border-top: 2px solid #e3e3e3;
-    margin: 0px;
-    padding: 0px;
-}
 .download-box {
-    margin: 0.66666666666667em 25px 55px;
+    margin: 3em 2em 4em;
     position: relative;
-    background-color: #fff;
+    background-color: rgb(238, 238, 246);
     display: block;
     float: none;
-
-    box-shadow: 3px 3px 10px rgba(0,0,0,.1);
-    border-radius: 4px;
+    border-top: solid 0.125em rgba(102, 102, 153);
+    padding: 0.75em 0.625em;
+    box-shadow: 2px 0 2px -2px rgb(212, 212, 232) inset, -2px 0 2px -2px rgb(212, 212, 232) inset;
+}
+.download-box h2 {
+    color: #333;
+    font-size: 1.125em;
+    line-height: 1.33;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: -2em;
+    left: 0;
+}
+.download-box .changelog {
+    font-style: italic;
+    font-weight: bold;
+}
+.download-box ul, .download-box li {
+    list-style: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.download-box li {
+    margin-top: 0.75em;
 }
 .download-box .md5sum {
-    font-size: 0.9em;
+    display: block;
     font: normal 14px / 1.46 "Source Code Pro", monospace;
-    padding-right: 20%;
-    float: right;
+}
+.download-box .md5sum:before {
+    content: "md5: ";
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
 }
 .download-box .releasedate {
     float: right;
     font-size: 0.9em;
 }
-.download-box .changelog {
-    float: right;
-    margin-right: 10px;
+.download-box h3 {
+    margin-top: 0.75em;
+    font-size: 1em;
+    font-style: italic;
+    font-weight: bold;
 }
-
+.download-box .gpg {
+    background: white;
+    border: solid 1px rgb(214, 214, 214);
+    margin: 0px;
+    padding: 0.75em 0.625em;
+    overflow: auto;
+}
 .download-box pre {
     font: normal 14px / 1.46 "Source Code Pro", monospace;
 }

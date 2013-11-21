@@ -99,7 +99,9 @@ foreach ($rows as $row) {
        $mver = substr($v, 0, strrpos($v, "."));
 ?>
 <div class="download-box">
-  <h1 id="v<?php echo $v; ?>">PHP <?php echo "$mver $stable"; ?></h1>
+  <h2 id="v<?php echo $v; ?>">PHP <?php echo "$mver $stable"; ?></h2>
+
+  <a href="/ChangeLog-<?php echo $MAJOR; ?>.php#<?php echo urlencode($v); ?>" class="changelog">Changelog for PHP <?php echo $v; ?></a>
 
   <ul>
 <?php
@@ -108,14 +110,13 @@ foreach($a["source"] as $rel) {
 
         download_link($rel["filename"], $rel["name"]);
         echo " <span class='releasedate'>({$rel["date"]})</span>\n";
-        echo " <span class=\"md5sum\">md5: {$rel["md5"]}</span><br />\n";
+        echo " <span class=\"md5sum\">{$rel["md5"]}</span>\n";
         (isset($rel["note"]) && $rel["note"] ? "<p><strong>Note:</strong>{$rel["note"]}</p>": "");
     echo " </li>\n";
 }
 ?>
   </ul>
-      <a href="/ChangeLog-<?php echo $MAJOR; ?>.php#<?php echo urlencode($v); ?>" class="changelog">Changelog for PHP <?php echo $v; ?></a>
-GPG Keys
+<h3>GPG Keys</h3>
 <pre class="gpg">
 <?php echo $gpg[$mver]; ?>
 </pre>
