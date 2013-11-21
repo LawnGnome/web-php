@@ -2909,7 +2909,7 @@ fieldset {
     font: normal 14px / 1.46 "Source Code Pro", monospace;
 }
 @media (max-width: 465px) {
-    .download-box h2 .release-state {
+    .download-box h3 .release-state {
         display: none;
     }
 }
