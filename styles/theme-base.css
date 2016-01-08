@@ -1419,7 +1419,8 @@ ul.chunklist_children {
     margin-bottom:0;
     
 }
-.docs .layout-menu ul.parent-menu-list > li > a {
+.docs .layout-menu ul.parent-menu-list > li > a,
+.docs .layout-menu ul.parent-menu-list > li > .heading {
     border:0;
     font-size: 1.125rem;
     margin-bottom:0.75rem;
@@ -1428,6 +1429,7 @@ ul.chunklist_children {
 
 .docs .layout-menu ul.child-menu-list {
     margin: 0;
+    padding-bottom: 2.25em;
 }
 
 .layout-menu ul.child-menu-list li {

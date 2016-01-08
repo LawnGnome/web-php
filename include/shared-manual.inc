@@ -500,6 +500,7 @@ function manual_footer() {
     manual_notes($USERNOTES);
     echo "</section>";
     $config = array(
+        'js' => array('toc.js'),
         'related_menu' => $__RELATED['toc'],
         'related_menu_deprecated' => $__RELATED['toc_deprecated']
     );
